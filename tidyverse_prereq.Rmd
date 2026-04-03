@@ -3,7 +3,7 @@ title: "tidyverse_script"
 output: html_document
 date: "2026-04-03"
 ---
-install.packages("tidyverse")
+
 library(tidyverse)
 
 # A silly R program
