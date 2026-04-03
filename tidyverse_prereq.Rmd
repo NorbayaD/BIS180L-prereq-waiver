@@ -10,42 +10,39 @@ library(tidyverse)
 # This is the first program that Professor Maloof asked us to write in R
 
 ```{r hello_world2}
-
 print("Hello World")
-
 ```
 
 
 #import file
+
 ```{r} 
 heightdata<-read.csv("C:/Users/norba/Downloads/height_data_clean.csv")
 ```
 
 #filter for specific date data and group by pop
-
-
-
 ```{r}
-
-# Load necessary libraries
-library(tidyverse)
 
 # Load the dataset
 heightdata <- read.csv("C:/Users/norba/Downloads/height_data_clean.csv")
+```
 
-# Check column names to ensure they match exactly
+
+# Check column names to ensure they match exactly and convert date to date format
+```{r}
 colnames(heightdata)
-
-# Convert survey_date to Date format if it's not already
 heightdata$survey_date <- as.Date(heightdata$survey_date, format = "%Y-%m-%d")
+```
 
-# Filter data for January 27, 2023, and compute the average height_cm by 'pop'
+# Filter data for January 27, 2023 and calculate average
+```{r}
 heightdata_filtered <- heightdata %>%
   filter(survey_date == "2023-01-27") %>%
   group_by(pop) %>%
-  summarize(average_height_cm = mean(height_cm, na.rm = TRUE))
+  summarize(ave_height_cm = mean(height_cm, na.rm = TRUE))
 
-# Display the filtered data
 heightdata_filtered
+
 ```
+
 
