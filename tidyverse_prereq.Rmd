@@ -1,0 +1,33 @@
+---
+title: "BIS180L PREREQ"
+output: html_document
+date: "2026-04-03"
+---
+# A silly R program
+# This is the first program that Professor Maloof asked us to write in R
+
+```{r hello_world2}
+
+print("Hello World")
+
+```
+
+library(tidyverse)
+library(ggplot2)
+
+```{r} 
+
+heightdata<-read.csv("C:/Users/norba/Downloads/height_data_clean.csv")
+
+```
+
+
+```{r}
+heightdata_filtered<- heightdata%>%
+  filter(survey_date == "2023-01-27")%>%
+  group_by(pop)%>%
+  summarize(average_height_cm=mean(height_cm,na.rm=TRUE))
+
+heightdata_filtered
+```
+
