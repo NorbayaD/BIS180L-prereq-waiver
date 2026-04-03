@@ -10,8 +10,9 @@
 
 
 
+<meta name="date" content="2026-04-03" />
 
-<title>Assignment 3, Part 1</title>
+<title>tidyverse_script</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -348,109 +349,69 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Assignment 3, Part 1</h1>
+<h1 class="title toc-ignore">tidyverse_script</h1>
+<h4 class="date">2026-04-03</h4>
 
 </div>
 
 
-<p>% <strong>Name:</strong> Norbaya Durr</p>
-<p><strong>Student ID:</strong></p>
-<p>For each of the exercises below, take advantage of R markdown
-features. That is, include the code as a code chunk and have Rstudio
-embed your answers. See Exercise 0 for an example</p>
-<div id="exercise-0-example" class="section level2">
-<h2>Exercise 0 (example)</h2>
-<p><em>Provide the name of your current working directory and list the
-files therein</em></p>
-<pre class="r"><code>getwd()</code></pre>
-<pre><code>## [1] &quot;C:/Users/norba/OneDrive/Fellowships, Grants, Scholarships/BIS180L-prereq-waiver&quot;</code></pre>
-<pre class="r"><code>dir()</code></pre>
-<pre><code>## [1] &quot;Assignment_3_template_1.html&quot; &quot;Assignment_3_template_1.Rmd&quot; 
-## [3] &quot;Biography.html&quot;               &quot;Biography.md&quot;                
-## [5] &quot;BIS180L-prereq-waiver.Rproj&quot;  &quot;README.md&quot;                   
-## [7] &quot;tidyverse_prereq.Rmd&quot;</code></pre>
-<p>(You would then click on the &gt; arrow in your answer code block to
-run it before continuing)</p>
+<p>install.packages(“tidyverse”) library(tidyverse)</p>
+<div id="a-silly-r-program" class="section level1">
+<h1>A silly R program</h1>
 </div>
-<div id="exercise-1" class="section level2">
-<h2>Exercise 1</h2>
-<p><em>Use sum() to determine the sum of numbers from 2000 to 20000.
-Provide your code and have Rmarkdown produce the actual sum in your
-answer.</em></p>
-</div>
-<div id="exercise-2" class="section level2">
-<h2>Exercise 2</h2>
-<p><em>In one or two sentences, describe what the above code snippet
-did.</em> <strong>Important: this refers to the code snippet in the
-online web manual, NOT the code for Exercise 1</strong>. You should
-always be looking at the lab manual when you answer these questions.</p>
-<p>The above snippet added the two numerical values within the
-parenthesis. The sum denotes to take the sum of the numerical values
-within the parenthesis.</p>
-</div>
-<div id="exercise-3" class="section level2">
-<h2>Exercise 3</h2>
-<p><em>Add the contents of a and b together and place the results in a
-new object. Examine the result. Include your code. Try using both
-<code>sum()</code> and <code>+</code>; do you get different results? If
-so, why?</em></p>
-<p>thesum &lt;-sum(2000+20000)</p>
-<p>the sume&lt;-</p>
-</div>
-<div id="exercise-4" class="section level2">
-<h2>Exercise 4</h2>
-<p><em>What is the sum of the 5th through 10th element of object b?
-Provide your code and the sum.</em></p>
-</div>
-<div id="exercise-5" class="section level2">
-<h2>Exercise 5</h2>
-<p><em>What is the sum of the 3rd, 8th, and 10th element of b? For both
-of these exercises should only need to have “b” in your code
-once.</em></p>
-</div>
-<div id="exercise-6" class="section level2">
-<h2>Exercise 6</h2>
-<p><em>When extracting from a 2-dimensional object, which number
-specifies rows and which specifies columns?</em></p>
-<p><em>What does <code>m[3,]</code> do?</em></p>
-<p><em>How can you extract the 3rd, 4th and 5th columns of m together as
-one object?</em></p>
-</div>
-<div id="exercise-7" class="section level2">
-<h2>Exercise 7</h2>
-<p><em>What does the cbind command do? How about rbind?</em></p>
-<p><em>Create a new object “n” where the first row is a new row of
-numbers (your choice) and the following rows are the rows from matrix
-m.</em></p>
-<p><em>Want more? (OPTIONAL) do the same but reverse the order of the
-rows from matrix m.</em></p>
-</div>
-<div id="exercise-8" class="section level2">
-<h2>Exercise 8</h2>
-<p>Copy or move your Swirl Notes into the repo, add and commit them.</p>
-<p>Enter the file name(s) here:</p>
-<p><strong>Turning in the assignment</strong></p>
-<ol style="list-style-type: decimal">
-<li>Click the Knit button to generate an up-to-date html file of your
-markdown document. Check it to make sure you are happy with its
-content.</li>
-<li>Add your .Rmd and .html files to the repository and commit the
-changes.</li>
-<li>Push the changes</li>
-</ol>
-<p><strong>Preview the html on github</strong></p>
-<p>If you want to confirm that the correct html file was uploaded:</p>
-<ol style="list-style-type: decimal">
-<li>Click on the html file on github.</li>
-<li>Click on the “raw” button (right hand side of the screen)</li>
-<li>Copy the URL at the top of the next page (URL should start with
-“raw.”)</li>
-<li>Go to <a href="https://htmlpreview.github.io" class="uri">https://htmlpreview.github.io</a> and paste in the link (use
-the same browser you are using in step 3)</li>
-</ol>
-<p>install.packages(“rmarkdown”) library(rmarkdown)</p>
-<p>install.packages(“usethis”) install.packages(“gitcreds”)
-library(“usethis”) library(“gitcreds”)</p>
+<div id="this-is-the-first-program-that-professor-maloof-asked-us-to-write-in-r" class="section level1">
+<h1>This is the first program that Professor Maloof asked us to write in
+R</h1>
+<pre class="r"><code>print(&quot;Hello World&quot;)</code></pre>
+<pre><code>## [1] &quot;Hello World&quot;</code></pre>
+<p>#import file</p>
+<pre class="r"><code>heightdata&lt;-read.csv(&quot;C:/Users/norba/Downloads/height_data_clean.csv&quot;)</code></pre>
+<p>#filter for specific date data and group by pop</p>
+<pre class="r"><code># Load necessary libraries
+library(tidyverse)</code></pre>
+<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 4.5.3</code></pre>
+<pre><code>## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+## ✔ dplyr     1.2.0     ✔ readr     2.1.6
+## ✔ forcats   1.0.1     ✔ stringr   1.6.0
+## ✔ ggplot2   4.0.2     ✔ tibble    3.3.1
+## ✔ lubridate 1.9.5     ✔ tidyr     1.3.2
+## ✔ purrr     1.2.1     
+## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()
+## ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+<pre class="r"><code># Load the dataset
+heightdata &lt;- read.csv(&quot;C:/Users/norba/Downloads/height_data_clean.csv&quot;)
+
+# Check column names to ensure they match exactly
+colnames(heightdata)</code></pre>
+<pre><code>##  [1] &quot;plantID&quot;     &quot;survey_date&quot; &quot;block&quot;       &quot;row&quot;         &quot;col&quot;        
+##  [6] &quot;pop&quot;         &quot;mf&quot;          &quot;rep&quot;         &quot;height_cm&quot;   &quot;herbivory&quot;</code></pre>
+<pre class="r"><code># Convert survey_date to Date format if it&#39;s not already
+heightdata$survey_date &lt;- as.Date(heightdata$survey_date, format = &quot;%Y-%m-%d&quot;)
+
+# Filter data for January 27, 2023, and compute the average height_cm by &#39;pop&#39;
+heightdata_filtered &lt;- heightdata %&gt;%
+  filter(survey_date == &quot;2023-01-27&quot;) %&gt;%
+  group_by(pop) %&gt;%
+  summarize(average_height_cm = mean(height_cm, na.rm = TRUE))
+
+# Display the filtered data
+heightdata_filtered</code></pre>
+<pre><code>## # A tibble: 23 × 2
+##    pop   average_height_cm
+##    &lt;chr&gt;             &lt;dbl&gt;
+##  1 BH                 3.22
+##  2 CC                 4.68
+##  3 CP2                1.78
+##  4 CP3                1.23
+##  5 DPR                5.12
+##  6 FR                 3.51
+##  7 IH                 3.48
+##  8 LV1                1.2 
+##  9 LV3                2.17
+## 10 LVTR1              1.78
+## # ℹ 13 more rows</code></pre>
 </div>
 
 

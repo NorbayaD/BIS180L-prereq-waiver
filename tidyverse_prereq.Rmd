@@ -1,8 +1,11 @@
 ---
-title: "BIS180L PREREQ"
+title: "tidyverse_script"
 output: html_document
 date: "2026-04-03"
 ---
+install.packages("tidyverse")
+library(tidyverse)
+
 # A silly R program
 # This is the first program that Professor Maloof asked us to write in R
 
@@ -12,24 +15,37 @@ print("Hello World")
 
 ```
 
-library(tidyverse)
-library(ggplot2)
-
 
 #import file
 ```{r} 
-
 heightdata<-read.csv("C:/Users/norba/Downloads/height_data_clean.csv")
-
 ```
 
 #filter for specific date data and group by pop
-```{r}
-heightdata_filtered<- heightdata%>%
-  filter(survey_date == "2023-01-27")%>%
-  group_by(pop)%>%
-  summarize(average_height_cm=mean(height_cm,na.rm=TRUE))
 
+
+
+```{r}
+
+# Load necessary libraries
+library(tidyverse)
+
+# Load the dataset
+heightdata <- read.csv("C:/Users/norba/Downloads/height_data_clean.csv")
+
+# Check column names to ensure they match exactly
+colnames(heightdata)
+
+# Convert survey_date to Date format if it's not already
+heightdata$survey_date <- as.Date(heightdata$survey_date, format = "%Y-%m-%d")
+
+# Filter data for January 27, 2023, and compute the average height_cm by 'pop'
+heightdata_filtered <- heightdata %>%
+  filter(survey_date == "2023-01-27") %>%
+  group_by(pop) %>%
+  summarize(average_height_cm = mean(height_cm, na.rm = TRUE))
+
+# Display the filtered data
 heightdata_filtered
 ```
 
