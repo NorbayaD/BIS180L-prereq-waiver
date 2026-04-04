@@ -74,16 +74,48 @@ sum(b, c(3,8,10))
 ## Exercise 6
 _When extracting from a 2-dimensional object, which number specifies rows and which specifies columns?_
 
+the first number specifies rows and the second specifies coloumns
+
+
 _What does `m[3,]` do?_
 
+this argument selects for values in the data m from row 3 and all column. 
+
+
+
 _How can you extract the 3rd, 4th and 5th columns of m together as one object?_
+
+m[, c(3,4,5)]
+
 
 ## Exercise 7
 _What does the cbind command do?  How about rbind?_
 
+cbind will combine vector columns, and rows (rbind), from a vector sequence, matrix, or data-frame arguments.
+
+
 _Create a new object "n" where the first row is a new row of numbers (your choice) and the following rows are the rows from matrix m._
 
+
+w<-(c(4,5,6))
+
+m<- matrix(1:15, nrow=5, ncol=3)
+
+thebind<- rbind(w,m)
+
+thebind
+
 _Want more? (OPTIONAL) do the same but reverse the order of the rows from matrix m._
+
+
+w<-(c(4,5,6))
+
+mm<- matrix(15:1, nrow=5, ncol=3)
+
+thebind2<- rbind(w,mm)
+
+thebind2
+
 
 ## Exercise 8
 
@@ -106,8 +138,3 @@ If you want to confirm that the correct html file was uploaded:
 3. Copy the URL at the top of the next page (URL should start with "raw.")
 4. Go to https://htmlpreview.github.io and paste in the link (use the same browser you are using in step 3)
 
-
-install.packages("usethis")
-install.packages("gitcreds")
-library("usethis")
-library("gitcreds")
