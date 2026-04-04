@@ -6,7 +6,7 @@ output: html_document
 
 __Name:__ Norbaya Durr
 
-__Student ID:__
+__Student ID:__ 924101713
 
 For each of the exercises below, take advantage of R markdown features.  That is, include the code as a code chunk and have Rstudio embed your answers.  See Exercise 0 for an example
 
@@ -24,7 +24,9 @@ dir()
 _Use sum() to determine the sum of numbers from 2000 to 20000.  Provide your code and have Rmarkdown produce the actual sum in your answer._
 
 ```{r}
-sum<- sum(2000:20000)
+numsum<- sum(2000:20000)
+
+numsum
 
 ```
 
@@ -33,7 +35,7 @@ sum<- sum(2000:20000)
 _In one or two sentences, describe what the above code snippet did._ __Important: this refers to the code snippet in the online web manual, NOT the code for Exercise 1__.  You should always be looking at the lab manual when you answer these questions.
 
 
-The above snippet adds all numbers between 2000 and 20000 together. 
+The above snippet adds all whole numbers between 2000 and 20000 together using the sum() function
 
 ## Exercise 3
 _Add the contents of a and b together and place the results in a new object.  Examine the result.  Include your code.  Try using both `sum()` and `+`; do you get different results?  If so, why?_
@@ -44,11 +46,14 @@ _Add the contents of a and b together and place the results in a new object.  Ex
 a<-5
 b<-2:20
 
+ab1<-a+b
+ab1
+
 ab_sum<- sum(a+b)
 ab_sum
 
 ```
-
+the values are different. the ab1 output shows that the value of a (5) will be added to each of the numbers in b (2:20), which produces several different sum number values. 
 
 
 ## Exercise 4
@@ -56,7 +61,7 @@ _What is the sum of the 5th through 10th element of object b?  Provide your code
 
 ```{r}
 
-sum(b, 5:10)
+sum(b[5:10])
 
 ```
 
@@ -66,7 +71,7 @@ _What is the sum of the 3rd, 8th, and 10th element of b?  For both of these exer
 
 ```{r}
 
-sum(b, c(3,8,10))
+sum(b [c(3,8,10)])
 ```
 
 
@@ -79,8 +84,7 @@ the first number specifies rows and the second specifies coloumns
 
 _What does `m[3,]` do?_
 
-this argument selects for values in the data m from row 3 and all column. 
-
+this argument selects for values in the data m only from row 3 and across all columns. 
 
 
 _How can you extract the 3rd, 4th and 5th columns of m together as one object?_
@@ -96,7 +100,7 @@ cbind will combine vector columns, and rows (rbind), from a vector sequence, mat
 
 _Create a new object "n" where the first row is a new row of numbers (your choice) and the following rows are the rows from matrix m._
 
-
+```{r}
 w<-(c(4,5,6))
 
 m<- matrix(1:15, nrow=5, ncol=3)
@@ -104,10 +108,14 @@ m<- matrix(1:15, nrow=5, ncol=3)
 thebind<- rbind(w,m)
 
 thebind
+```
+
+
 
 _Want more? (OPTIONAL) do the same but reverse the order of the rows from matrix m._
 
 
+```{r}
 w<-(c(4,5,6))
 
 mm<- matrix(15:1, nrow=5, ncol=3)
@@ -116,12 +124,13 @@ thebind2<- rbind(w,mm)
 
 thebind2
 
+```
 
 ## Exercise 8
 
 Copy or move your Swirl Notes into the repo, add and commit them.
 
-Enter the file name(s) here:
+Enter the file name(s) here: 1) Assignment_3_template_1.html, Assignment_3_template_1.Rmd
 
 **Turning in the assignment**
 

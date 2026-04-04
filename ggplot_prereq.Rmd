@@ -45,7 +45,7 @@ group_by(pop)
 
 #Boxplot subset data
 ```{r}
-ggplot(data= subsetdata, aes(x=survey_date, y=height_cm, color=pop))+
+  ggplot(data= subsetdata, aes(x=survey_date, y=height_cm, color=pop))+
 geom_boxplot()
 ```
 
@@ -60,7 +60,4 @@ ggplot(data = heightdata, mapping = aes(x = survey_date, y = height_cm, color = 
        y = "Height (cm)") +
   theme_minimal()
 ```
-
-
-chooseCRANmirror()
 

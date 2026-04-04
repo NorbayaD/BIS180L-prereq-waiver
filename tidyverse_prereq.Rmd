@@ -37,11 +37,16 @@ heightdata$survey_date <- as.Date(heightdata$survey_date, format = "%Y-%m-%d")
 
 # Filter data for January 27, 2023 and calculate average
 
+
+```{r}
 heightdata_filtered <- heightdata %>%
   filter(survey_date == "2023-01-27") %>%
   group_by(pop) %>%
   summarize(ave_height_cm = mean(height_cm, na.rm = TRUE))
 
 heightdata_filtered
+```
+
+
 
 
