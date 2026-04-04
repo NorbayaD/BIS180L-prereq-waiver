@@ -24,7 +24,7 @@ dir()
 _Use sum() to determine the sum of numbers from 2000 to 20000.  Provide your code and have Rmarkdown produce the actual sum in your answer._
 
 ```{r}
-
+sum<- sum(2000:20000)
 
 ```
 
@@ -33,24 +33,42 @@ _Use sum() to determine the sum of numbers from 2000 to 20000.  Provide your cod
 _In one or two sentences, describe what the above code snippet did._ __Important: this refers to the code snippet in the online web manual, NOT the code for Exercise 1__.  You should always be looking at the lab manual when you answer these questions.
 
 
-The above snippet added the two numerical values within the parenthesis. The sum denotes to take the sum of the numerical values within the parenthesis. 
-
-
-
+The above snippet adds all numbers between 2000 and 20000 together. 
 
 ## Exercise 3
 _Add the contents of a and b together and place the results in a new object.  Examine the result.  Include your code.  Try using both `sum()` and `+`; do you get different results?  If so, why?_
 
+
+#create variables and add 
+```{r}
+a<-5
+b<-2:20
+
+ab_sum<- sum(a+b)
+ab_sum
+
+```
 
 
 
 ## Exercise 4
 _What is the sum of the 5th through 10th element of object b?  Provide your code and the sum._
 
+```{r}
+
+sum(b, 5:10)
+
+```
 
 
 ## Exercise 5
 _What is the sum of the 3rd, 8th, and 10th element of b?  For both of these exercises should only need to have "b" in your code once._
+
+```{r}
+
+sum(b, c(3,8,10))
+```
+
 
 
 ## Exercise 6
@@ -93,5 +111,3 @@ install.packages("usethis")
 install.packages("gitcreds")
 library("usethis")
 library("gitcreds")
-
-
