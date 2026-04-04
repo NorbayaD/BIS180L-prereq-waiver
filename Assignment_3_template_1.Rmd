@@ -42,9 +42,7 @@ The above snippet added the two numerical values within the parenthesis. The sum
 _Add the contents of a and b together and place the results in a new object.  Examine the result.  Include your code.  Try using both `sum()` and `+`; do you get different results?  If so, why?_
 
 
-thesum <-sum(2000+20000)
 
-the sume<-
 
 ## Exercise 4
 _What is the sum of the 5th through 10th element of object b?  Provide your code and the sum._
@@ -89,32 +87,6 @@ If you want to confirm that the correct html file was uploaded:
 2. Click on the "raw" button (right hand side of the screen)
 3. Copy the URL at the top of the next page (URL should start with "raw.")
 4. Go to https://htmlpreview.github.io and paste in the link (use the same browser you are using in step 3)
-
-
-
-```{r hello_world2}
-
-print("Hello World")
-
-```
-
-
-#import file
-```{r} 
-heightdata<-read.csv("C:/Users/norba/Downloads/height_data_clean.csv")
-```
-
-#filter for specific date data and group by pop
-
-```{r}
-
-heightdata_filtered<- heightdata%>%
-  filter(survey_date == "2023-01-27")%>%
-  group_by(pop)%>%
-  summarize(average_height_cm=mean(height_cm,na.rm=TRUE))
-
-heightdata_filtered
-```
 
 
 install.packages("usethis")

@@ -1,11 +1,15 @@
 ---
 title: "GGPLOT pre-req"
-output: html_document
+output:
+  html_document: default
+  pdf_document: default
 date: "2026-04-03"
 ---
 
+
 library(ggplot2)
 library(tidyverse)
+library(dplyr)
 
 # Load the dataset
 ```{r}
@@ -19,15 +23,17 @@ heightdata$survey_date <- as.Date(heightdata$survey_date, format = "%Y-%m-%d")
 ```
 
 
-# Plot the trend lines, separate by population
 ```{r}
-ggplot(data = heightdata, mapping = aes(x = survey_date, y = height_cm, color = pop)) +
-  geom_smooth(method = "lm", se = FALSE) +
-  labs(title = "Height Trend Over Time by Population",
-       x = "Survey Date",
-       y = "Height (cm)") +
+
+ggplot(data=heightdata, mapping = aes(x=survey_date, y=height_cm, color=pop))+
+  geom_smooth(method="lm", se=FALSE)+
+  labs(title= "Height Trend Over Time by Population",
+       x="Survey Date",
+       y= "Height (cm")+
   theme_minimal()
+
 ```
+
   
 
 #subset data selecting for January 23, 2023 only
@@ -55,4 +61,6 @@ ggplot(data = heightdata, mapping = aes(x = survey_date, y = height_cm, color = 
   theme_minimal()
 ```
 
+
+chooseCRANmirror()
 
