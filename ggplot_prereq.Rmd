@@ -7,9 +7,9 @@ date: "2026-04-03"
 ---
 
 
-library(ggplot2)
+```{r}
 library(tidyverse)
-library(dplyr)
+```
 
 # Load the dataset
 ```{r}
