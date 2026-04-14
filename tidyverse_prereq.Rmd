@@ -4,7 +4,9 @@ output: html_document
 date: "2026-04-03"
 ---
 
+```{r}
 library(tidyverse)
+```
 
 # A silly R program
 # This is the first program that Professor Maloof asked us to write in R
@@ -36,7 +38,6 @@ heightdata$survey_date <- as.Date(heightdata$survey_date, format = "%Y-%m-%d")
 ```
 
 # Filter data for January 27, 2023 and calculate average
-
 
 ```{r}
 heightdata_filtered <- heightdata %>%

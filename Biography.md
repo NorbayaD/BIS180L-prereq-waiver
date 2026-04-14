@@ -1,17 +1,23 @@
+---
+title: "My Biography"
+output: html_document
+---
 
-# My Biography
+
+```
 Norbaya Durr
-
+```
 ```
 **Chicago**
 *1987*
+
 ```
 ```
 |Places Lived | Start Year | End Year |
-|---|---|---|
-|Chicago | 1987 | 2025 |
-|Botswana | 2022 | 2024 |
-|Iowa | 1992 | 1995 |
+|-------------|----------- |----------|
+|Chicago      | 1987       | 2025     |
+|Iowa         | 1992       | 1995     |
+|Botswana     | 2022       | 2024     |
 ```
 ```
 1. Complete Bis180L Pre-req
@@ -21,5 +27,5 @@ Norbaya Durr
 ```
 
 ```
-I enjoyed living in [Botswana](https://en.wikipedia.org/wiki/Botswana)
+I enjoyed living in [Botswana](https://en.wikipedia.org/wiki/Botswana).
 ```
